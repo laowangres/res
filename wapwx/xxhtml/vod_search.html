@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>搜索{page:key}-{maccms:name}</title>
+<meta name="keywords" content="{page:key},{maccms:name}" />
+<meta name="description" content="{page:key},{maccms:name}" />
+{maccms:include}
+</head>
+<body>
+{maccms:head}
+<div id="content">
+  <div id="resize_list">
+    <div class="c-box">
+      <div class="title">
+        <h2>搜索 <strong style="color:#e12160;">{page:key}</strong> 共找到 <strong style="color:red" id="counts">{page:datacount} </strong> 个结果</h2>
+      </div>
+      <div class="plist">
+        <ul class="list_tab_img">
+            {maccms:vod pagesize=30 order=desc by=time}
+			<li>
+                <a href="[vod:link]">
+                    <div class="picsize"><img src="[vod:pic]">
+                      <label class="title">[vod:starring]</label>
+                      <label class="name">[vod:name]</label>
+                    </div>
+                </a>
+            </li>
+            {/maccms:vod}
+        </ul>
+      </div>
+    </div>
+    <div class="c-box">
+      <div class="pages">{maccms:pages len=0}</div>
+    </div>
+    <div class="c-box"></div>
+  </div>
+</div>
+{maccms:foot}
+</body>
+</html>

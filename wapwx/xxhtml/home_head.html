@@ -1,0 +1,18 @@
+<div class="sosuo">
+    <form name="ffsearch" method="post" action="{maccms:link_search_vod}">
+        <div class="searchFormCon globalPadding">
+            <p class="pSearchForm">
+                <input autocomplete="off" id="wd" name="wd" class="searchTxt searchTxtBlur" type="text">
+                <input class="searchBtn" type="submit">
+            </p>
+        </div>
+    </form>
+</div>
+<div class="menu">
+  <ul id="Menu">
+    <li><a href="/" onclick="change_bg(this)" {if-A:{maccms:siteaid}=10}class="current"{endif-A}>首页</a></li>
+	{maccms:menu type=parent order=asc table=vod}
+		<li><a href="[menu:link]" {if-A:[menu:id]={maccms:curvodtypeid}} class="current"{endif-A}>[menu:name]</a></li>
+	{/maccms:menu}
+  </ul>
+</div>

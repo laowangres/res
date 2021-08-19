@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>好看的{page:name}-最新{page:name}-经典{page:name}-{page:name}电影推荐-{maccms:name}</title>
+<meta name="keywords" content="{page:key}" />
+<meta name="description" content="{page:des}" />
+{maccms:include}
+</head>
+<body>
+{maccms:head}
+<div id="content">
+  <div id="resize_list">
+    <div class="c-box">
+      <div class="title">
+        <h2>最新{page:name}列表</h2>
+      </div>
+      <div class="plist">
+        <ul class="list_tab_img">
+            {maccms:vod pagesize=30 order=desc by=time type=current}
+			<li>
+                <a href="[vod:link]">
+                    <div class="picsize"><img src="[vod:pic]">
+                      <label class="title">[vod:starring]</label>
+                      <label class="name">[vod:name]</label>
+                    </div>
+                </a>
+            </li>
+            {/maccms:vod}
+        </ul>
+      </div>
+    </div>
+    <div class="c-box">
+      <div class="pages">{maccms:pages len=0}</div>
+    </div>
+    <div class="c-box"></div>
+  </div>
+</div>
+{maccms:foot}
+</body>
+</html>

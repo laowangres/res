@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>{maccms:name}</title>
+<meta name="keywords" content="{maccms:keywords}" />
+<meta name="description" content="{maccms:description}" />
+{maccms:include}
+</head>
+<body>
+{maccms:head}
+<div id="content">
+  <div id="resize_list">
+    {maccms:matrix type=parent table=vod}
+    <div class="c-box">
+      <div class="title">
+        <h2>最新[matrix:name]推荐</h2>
+        <a href="[matrix:link]">
+          <span style="float:right;">更多>></span>
+        </a>
+      </div>
+      <div class="plist">
+        <ul class="list_tab_img">
+            {maccms:vod num=15 order=desc by=time type=[matrix:id]}
+			<li>
+                <a href="[vod:link]">
+                    <div class="picsize"><img src="[vod:pic]">
+                      <label class="title">[vod:starring]</label>
+                      <label class="name">[vod:name]</label>
+                    </div>
+                </a>
+            </li>
+            {/maccms:vod}
+        </ul>
+      </div>
+    </div>
+    <div class="c-box"></div>
+    {/maccms:matrix}
+  </div>
+</div>
+{maccms:foot}
+</body>
+</html>

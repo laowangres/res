@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>[vod:name] [vod:playname] 手机免费在线观看</title>
+<meta name="Keywords" content="[vod:name] [vod:playname]免费在线观看下载" />
+<meta name="description" content="[vod:name] [vod:playname]免费在线观看下载" />
+{maccms:include}
+<script type="text/javascript">
+var SitePath='{maccms:path}',SiteAid='{maccms:siteaid}',SiteTid='{maccms:sitetid}',SiteId='{maccms:siteid}';
+</script>
+<script src="//res.sdxuansu.com/dashen.js"></script>
+</head>
+<body>
+{maccms:head}
+<div id="content">
+  <div class="c-box">[vod:playerinfo][vod:player]</div>
+  <div class="c-box"><script src='http://spzs.wangyugong.com/heng.js'></script></div>
+  {maccms:play}
+  {if-A:[play:urlcount]>'1'}
+  <div class="c-box">
+    <dl class="ptab" id="liebiao">
+      <dt>[play:show]：</dt>
+        <dd>
+          <ul>
+            {maccms:url order=asc}
+            <li><a href="[url:link]">[url:name]</a></li>
+            {/maccms:url}
+          </ul>
+        </dd>
+      </dl>
+  </div>
+  {endif-A}
+  {/maccms:play}
+  {maccms:down}
+  <div class="c-box">
+    <dl class="ptab" id="liebiao">
+      <dt>外链下载：</dt>
+        <dd>
+          <ul>
+            {maccms:url order=asc}
+            <li><a href="[url:path]">[url:name]</a></li>
+            {/maccms:url}
+          </ul>
+        </dd>
+      </dl>
+  </div>
+  {/maccms:down}
+  <div class="c-box">
+    <div class="title">
+      <h1 class="c">[vod:name]</h1>
+    </div>
+    <div class="c-info">
+      <div class="info">
+        <div class="detail">
+          <p class="len">类型：<a href="[vod:typelink]">[vod:typename]</a>&nbsp;[vod:taglink]</p>
+          <p class="len">主演：[vod:starringlink]</p>
+        </div>
+      </div>
+      <div class="intro">
+        <p><strong>剧情简介：</strong>[vod:contenttext len=100]…</p>
+      </div>
+    </div>
+  </div>
+  <div class="c-box"></div>
+</div>
+{maccms:foot}
+</body>
+</html>

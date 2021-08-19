@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>[vod:name] [vod:typename] 手机免费在线观看</title>
+<meta name="Keywords" content="[vod:name] [vod:playname]免费在线观看下载" />
+<meta name="description" content="[vod:name] [vod:playname]免费在线观看下载" />
+{maccms:include}
+</head>
+<body>
+{maccms:head}
+<div id="content">
+  <div class="c-box">
+    <div class="intro">
+        <div class="intropic"><img src="[vod:pic]"></div>
+        <div class="introtext">
+            <p style="font-size:18px;line-height:30px;">[vod:name]</p>
+            <p>状态：{if-A:[vod:state]<1}[vod:remarks]{elseif-A:[vod:state]<1000 and [vod:state]>0}第[vod:state]集{elseif-A:[vod:state]>1000}[vod:state]期{elseif-A:[vod:state]=0 and "[vod:remarks]"=""}大结局{else-A}{endif-A}</p>
+            <p>类型：<a href='[vod:typelink]'>[vod:typename]</a></p>
+            <p>主演：[vod:starring len=12]</p>
+            <p>更新时间：[vod:time style=y-m-d]</p>
+            <p>剧情简介：[vod:contenttext len=50]...</p>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+  </div>
+  <div class="c-box"></div>
+  {maccms:play}
+  <div class="c-box">
+    <dl class="ptab" id="liebiao">
+      <dt>[play:show]：</dt>
+        <dd>
+          <ul>
+            {maccms:url order=asc}
+            <li><a href="[url:link]">[url:name]</a></li>
+            {/maccms:url}
+          </ul>
+        </dd>
+      </dl>
+  </div>
+  {/maccms:play}
+  {maccms:down}
+  <div class="c-box">
+    <dl class="ptab" id="liebiao">
+      <dt>外链下载：</dt>
+        <dd>
+          <ul>
+            {maccms:url order=asc}
+            <li><a href="[url:path]">[url:name]</a></li>
+            {/maccms:url}
+          </ul>
+        </dd>
+      </dl>
+  </div>
+  {/maccms:down}
+  <div class="c-box">
+    <div class="title">
+      <h1 class="c">[vod:name]</h1>
+    </div>
+    <div class="c-info">
+      <div class="info">
+        <div class="detail">
+          <p class="len">类型：<a href="[vod:typelink]">[vod:typename]</a>&nbsp;[vod:taglink]</p>
+          <p class="len">主演：[vod:starringlink]</p>
+        </div>
+      </div>
+      <div class="intro">
+        <p><strong>剧情简介：</strong>[vod:contenttext len=100]…</p>
+      </div>
+    </div>
+  </div>
+  <div class="c-box"></div>
+</div>
+{maccms:foot}
+</body>
+</html>
